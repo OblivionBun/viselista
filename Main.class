@@ -1,5 +1,5 @@
 public class Main{
-public sttic void main(String agh[]){
+public static void main(String agh[]){
 System.out.println("Main");
 System.out.print("GG WP")
 }
