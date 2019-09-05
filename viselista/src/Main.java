@@ -19,8 +19,10 @@ public class Main {
             }
         }
         s_word += word.charAt(word.length()-1); //добавление последней буквы слова
-        char[] s_word_chars = s_word.toCharArray(); //преобразование строки в массивов чаров, для работы с символами по индексу
-        char[] word_chars = word.toCharArray(); //преобразование строки в массивов чаров, для работы с символами по индексу
+        String upgrade_s_word = s_word.toUpperCase() ;//Переводим первоначальную строку в верхний регистр
+        String upgrade_word  = word.toUpperCase();//Переводим первоначальную строку в верхний регистр
+        char[] s_word_chars = upgrade_s_word.toCharArray(); //преобразование строки в массивов чаров, для работы с символами по индексу
+        char[] word_chars = upgrade_word.toCharArray(); //преобразование строки в массивов чаров, для работы с символами по индексу
         System.out.println(s_word); //вывод того, что получилось: истребитель -> и-----и---ь
         System.out.println("2nd Player try to guess one of character!");
         int flag; //флаг для проверки, угадал ли игрок букву
@@ -29,7 +31,7 @@ public class Main {
         {
             flag = 1; //подготовка флага
             System.out.println("Write your character.");
-            char[] chr_arr = in.next().toCharArray(); //считывание массива символов, состоящий из 1 символа
+            char[] chr_arr = in.next().toUpperCase().toCharArray(); //считывание массива символов, состоящий из 1 символа
             char chr = chr_arr[0]; //преобразование в символ
             for (int i = 1; i < word.length() - 1; i++) //цикл проверки - правильный ли символ
             {
@@ -47,23 +49,23 @@ public class Main {
                 steps += 1; //приближение к проигрышу
                 System.out.println("Oh no! You on " + steps + "/10 to death");
             } else if (flag == 0) {
-                System.out.println("Nice!" + " Now your progress is ");
-                System.out.println(s_word_chars); //вывод результата правильного ответа
+
+                System.out.println("Nice!" + " Now your progress is "+s_word_chars.toString().toLowerCase());
+
             }
             if (steps == 10)
             {
                 for (int j = 0; j < 3; j++)
                 {
-                    Thread.sleep(1000); //создаёт задержку в 1 секунду, сделанно для эффекта
+                    Thread.sleep(100); //создаёт задержку в 1 секунду, сделанно для эффекта
                     System.out.println(".");
                 }
                 System.out.println("Omae wa mou shindeiru!!");
-                Thread.sleep(2000);
+                Thread.sleep(200);
                 System.exit(0); //завершение игры
             }
         }
         System.out.println("Congratulations 2nd Player! You win!!");
-        //mmmm
     }
 }
 
