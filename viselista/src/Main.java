@@ -31,8 +31,7 @@ public class Main {
         {
             flag = 1; //подготовка флага
             System.out.println("Write your character.");
-            char[] chr_arr = in.next().toUpperCase().toCharArray(); //считывание массива символов, состоящий из 1 символа
-            char chr = chr_arr[0]; //преобразование в символ
+            char chr = in.next().toUpperCase().charAt(0); //считывание массива символов, состоящий из 1 символа
             for (int i = 1; i < word.length() - 1; i++) //цикл проверки - правильный ли символ
             {
                 if (s_word_chars[i] == chr) //проверка на то, что такого же символа нет
