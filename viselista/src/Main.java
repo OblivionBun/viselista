@@ -54,7 +54,7 @@ public class Main {
             {
                 for (int j = 0; j < 3; j++)
                 {
-                    Thread.sleep(1000); //создаёт задержку в 1 секунду, сделанно для эффекта Умертвления
+                    Thread.sleep(1000); //создаёт задержку в 1 секунду, сделанно для эффекта
                     System.out.println(".");
                 }
                 System.out.println("Omae wa mou shindeiru!!");
