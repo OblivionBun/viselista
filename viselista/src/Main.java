@@ -1,8 +1,18 @@
 import java.util.Arrays;
 import java.util.Scanner;
+import Window_package.*;
 
-public class Main {
+import javax.swing.*;
+
+
+public class Main extends Window_for_visilitsa {
+
+
     public static void main(String[] args) throws InterruptedException {
+        Window_for_visilitsa app = new Window_for_visilitsa();
+        app.setVisible(true);
+
+
         System.out.println("1st Player write your word!");
         Scanner in = new Scanner(System.in); //инициализация Scanner'а
         String word = in.next(); //ввод загаданного слова
