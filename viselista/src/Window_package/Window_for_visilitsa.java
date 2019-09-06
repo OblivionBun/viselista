@@ -6,7 +6,7 @@ import java.awt.event.*;
 public class Window_for_visilitsa extends JFrame {
     private JLabel label = new JLabel("Слово");
     private JTextField input = new JTextField("", 5);
-    private JButton check_button = new JButton("Проверить");//
+    private JButton check_button = new JButton("Проверить");
     private Container container = this.getContentPane();
     Our_Figures x;
 
